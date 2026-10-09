@@ -287,7 +287,7 @@ app.whenReady().then(() => {
         event.sender.send('pak:progress', { type: 'extract', current, total, fileName })
       })
       return true
-    } catch (e) { console.error(e); return false }
+    } catch (e: any) { console.error(e); return { error: e.message || e.toString() } }
   })
 
   ipcMain.handle('pak:build', async (event, inDir, outPak, originalPak) => {
@@ -296,11 +296,12 @@ app.whenReady().then(() => {
         event.sender.send('pak:progress', { type: 'build', current, total, fileName })
       })
       return true
-    } catch (e) { console.error(e); return false }
+    } catch (e: any) { console.error(e); return { error: e.message || e.toString() } }
   })
 })
 
 app.on('window-all-closed', () => { if (process.platform !== 'darwin') app.quit() })
+
 
 
 

@@ -356,13 +356,13 @@ function App() {
     
     setProgress({ active: true, type: 'extract', current: 0, total: 100, fileName: 'Підготовка...' })
     try {
-      await window.electron.ipcRenderer.invoke('pak:extractAll', activeProject.pakPath, targetDir)
+      const res = await window.electron.ipcRenderer.invoke('pak:extractAll', activeProject.pakPath, targetDir); if (res && res.error) throw new Error(res.error);
       const updated = projects.map(p => p.id === activeProjectId ? { ...p, extractDir: targetDir } : p)
       saveProjects(updated)
       const files = await window.api.scanLocalFolder(targetDir)
       const t = buildTreeFromLocal(files); sortTree(t); setTree(t)
       setTabs([])
-    } catch (e) { console.error(e) }
+    } catch (e: any) { console.error(e); alert('Extract Error: ' + (e.message || e)) } finally { setProgress(prev => ({ ...prev, active: false })) }
   }
 
     const handleUniversalUnpack = async () => {
@@ -419,7 +419,7 @@ function App() {
     try {
         await window.electron.ipcRenderer.invoke('pak:build', inDir, outPak, originalPak)
         alert('Запаковано успішно!')
-      } catch (e) { console.error(e) }
+      } catch (e: any) { console.error(e); alert('Extract Error: ' + (e.message || e)) } finally { setProgress(prev => ({ ...prev, active: false })) }
       setProgress({ active: false, type: 'build', current: 100, total: 100, fileName: '' })
   }
 
@@ -1098,6 +1098,12 @@ function App() {
   )
 }
 export default App
+
+
+
+
+
+
 
 
 
