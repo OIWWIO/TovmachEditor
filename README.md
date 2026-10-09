@@ -1,26 +1,41 @@
 🇺🇦 Українська
 
+
 Tovmach Editor — це спеціалізований інструмент для перекладу та редагування ігрових текстів і локалізацій (зокрема XML-словників), що містяться у .pak архівах.
+
 
 Основні функції:
 
+
 Робота з архівами: Автоматичне розпакування та запакування .pak файлів без використання сторонніх інструментів.
+
 Професійний редактор: Вбудований редактор коду (на базі Monaco/VS Code) із підсвічуванням синтаксису, відображенням прихованих символів (табуляції, CRLF/LF) та підтримкою моноширинного тексту.
+
 Smart Compare (Розумне порівняння): Зручний режим Diff-редактора для порівняння оригінального та зміненого тексту пліч-о-пліч.
+
 Глобальний пошук: Швидкий пошук і масова заміна тексту по всіх файлах розпакованого проєкту, зокрема з підтримкою регулярних виразів (Regex) та врахуванням регістру.
+
 Управління проєктами: Зручне дерево файлів та підтримка кількох відкритих вкладок одночасно.
+
 
 
 🇬🇧 English
 
+
 Tovmach Editor is a specialized tool for translating and editing game localization texts (specifically XML dictionaries) contained within .pak archives.
+
 
 Key Features:
 
+
 Archive Management: Seamlessly unpack and repack .pak files without relying on external tools.
+
 Professional Editor: Built-in code editor (powered by Monaco/VS Code) featuring syntax highlighting, explicit rendering of hidden characters (tabs, CRLF/LF), and monospace font support.
+
 Smart Compare: An intuitive side-by-side Diff editor mode to easily compare original and modified text strings.
+
 Global Search: Fast search and mass replace capabilities across all files in an unpacked project, including full Regex and case-sensitive support.
+
 Project Management: Convenient file tree navigation and support for multiple open tabs simultaneously.
 
 
