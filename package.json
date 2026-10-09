@@ -1,0 +1,37 @@
+{
+    "name": "editor-app",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "electron-vite dev",
+        "build": "electron-vite build",
+        "pack": "electron-builder --dir",
+        "dist": "electron-builder --win",
+        "lint": "oxlint",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "@electron-toolkit/preload": "^3.0.2",
+        "@electron-toolkit/utils": "^4.0.0",
+        "@monaco-editor/react": "^4.7.0",
+        "crc-32": "^1.2.2",
+        "react": "^19.2.8",
+        "react-dom": "^19.2.8"
+    },
+    "devDependencies": {
+        "@types/node": "^24.13.3",
+        "@types/react": "^19.2.18",
+        "@types/react-dom": "^19.2.7",
+        "@vitejs/plugin-react": "^4.7.0",
+        "electron": "^44.6.0",
+        "electron-builder": "^26.15.3",
+        "electron-vite": "^5.0.0",
+        "lucide-react": "^1.52.0",
+        "oxlint": "^1.81.0",
+        "typescript": "~6.0.2",
+        "vite": "^5.4.21"
+    },
+    "main": "./out/main/index.js"
+}
+

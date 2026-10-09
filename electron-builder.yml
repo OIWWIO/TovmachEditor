@@ -1,0 +1,10 @@
+appId: com.tovmach.editor
+productName: TovmachEditor
+directories:
+  buildResources: build
+files:
+  - out
+win:
+  target: portable
+  icon: build/icon.ico
+
